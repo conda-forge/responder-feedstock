@@ -49,7 +49,7 @@ about:
   home: https://github.com/kennethreitz/responder/
   license: APACHE-2.0
   license_family: APACHE
-  license_file: LICENSE
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: 'A familiar HTTP Service Framework for Python'
   doc_url: http://python-responder.org/en/latest/
 
