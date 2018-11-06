@@ -34,13 +34,14 @@ requirements:
     - python-multipart
     - chardet
     - apispec >=1.0.0b1
-    - marshmallow >=3.0.0b7
+    - marshmallow
     - asgiref
+    - whitenoise
     - docopt
     - itsdangerous
     - requests-toolbelt
     - apistar
-
+    
 test:
   imports:
     - responder
