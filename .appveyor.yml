@@ -42,6 +42,7 @@ install:
 
     # Configure the VM.
     - cmd: conda.exe install -n root --quiet --yes conda-forge-ci-setup=2
+    - cmd: setup_conda_rc .\ .\recipe .\.ci_support\%CONFIG%.yaml
     - cmd: run_conda_forge_build_setup
 
 # Skip .NET project specific build phase.
