@@ -10,7 +10,7 @@ source:
   sha256: a02d4329d691e0d8d4ec1a9a7d7857b93ae9c835fd56faf550ec0ee5df72d950
 
 build:
-  number: 0
+  number: 1001
   skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python
-    - starlette
+    - starlette <0.8
     - uvicorn
     - aiofiles
     - pyyaml
@@ -34,13 +34,14 @@ requirements:
     - python-multipart
     - chardet
     - apispec >=1.0.0b1
-    - marshmallow >=3.0.0b7
+    - marshmallow
     - asgiref
+    - whitenoise
     - docopt
     - itsdangerous
     - requests-toolbelt
     - apistar
-
+    
 test:
   imports:
     - responder
