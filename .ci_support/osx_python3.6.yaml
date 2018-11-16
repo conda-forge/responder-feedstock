@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 build_number_decrement:
 - '0'
 channel_sources:
-- conda-forge,conda-forge/label/dev,defaults
+- conda-forge,defaults
 channel_targets:
 - conda-forge main
 docker_image:
@@ -18,3 +18,7 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '3.6'
+zip_keys:
+- - channel_sources
+  - channel_targets
+  - build_number_decrement
