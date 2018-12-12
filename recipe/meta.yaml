@@ -9,9 +9,11 @@ source:
   sha256: a02d4329d691e0d8d4ec1a9a7d7857b93ae9c835fd56faf550ec0ee5df72d950
 
 build:
-  number: 1000
+  number: 1001
   skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+  entry_points:
+    - responder = responder.cli:cli
 
 requirements:
   host:
@@ -40,15 +42,18 @@ requirements:
     - itsdangerous
     - requests-toolbelt
     - apistar
-    
+
 test:
   imports:
     - responder
+  commands:
+    - responder --help
 
 about:
   home: https://github.com/kennethreitz/responder/
   license: APACHE-2.0
   license_family: APACHE
+  # PR for inclusion in sdist: https://github.com/kennethreitz/responder/pull/262
   license_file: LICENSE
   summary: 'A familiar HTTP Service Framework for Python'
   doc_url: http://python-responder.org/en/latest/
