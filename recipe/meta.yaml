@@ -1,4 +1,4 @@
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 
 package:
   name: responder
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/responder/responder-{{ version }}.tar.gz
-  sha256: a02d4329d691e0d8d4ec1a9a7d7857b93ae9c835fd56faf550ec0ee5df72d950
+  sha256: 54ba618219c3b9a323ff3cac5ea8564e1f82b3c9199b943f871230cdd9715fb4
 
 build:
-  number: 1001
+  number: 1000
   skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
   entry_points:
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python
-    - starlette <0.9
+    - starlette
     - uvicorn
     - aiofiles
     - pyyaml
@@ -53,7 +53,6 @@ about:
   home: https://github.com/kennethreitz/responder/
   license: APACHE-2.0
   license_family: APACHE
-  # PR for inclusion in sdist: https://github.com/kennethreitz/responder/pull/262
   license_file: LICENSE
   summary: 'A familiar HTTP Service Framework for Python'
   doc_url: http://python-responder.org/en/latest/
