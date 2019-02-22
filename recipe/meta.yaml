@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python
-    - starlette
+    - starlette =0.10
     - uvicorn
     - aiofiles
     - pyyaml
