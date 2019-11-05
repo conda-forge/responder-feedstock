@@ -20,28 +20,26 @@ requirements:
     - python
     - pip
   run:
-    - python
-    - starlette =0.12
-    - uvicorn >=0.7,<0.9
     - aiofiles
-    - pyyaml
-    - requests
+    - apispec >=1.0.0b1
+    - apistar
+    - chardet
+    - docopt
     - graphene <3.0
     - graphql-server-core >=1.1
-    - jinja2
-    - parse
-    - uvloop  # [not win]
-    - rfc3986
-    - python-multipart
-    - chardet
-    - apispec >=1.0.0b1
-    - marshmallow
-    - asgiref
-    - whitenoise
-    - docopt
     - itsdangerous
+    - jinja2
+    - marshmallow
+    - python
+    - python-multipart
+    - pyyaml
+    - requests
     - requests-toolbelt
-    - apistar
+    - rfc3986
+    - starlette =0.12.*
+    - uvicorn >=0.7, <0.9
+    - uvloop  # [not win]
+    - whitenoise
 
 test:
   imports:
