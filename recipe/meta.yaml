@@ -9,17 +9,17 @@ source:
   sha256: 92cd3daf9d5c58f9c5ad40a2cd310af619e6bd66dab6eb45501c26d1758afada
 
 build:
-  number: 0
-  skip: True  # [py<36]
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - responder = responder.cli:cli
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
+    - python >=3.6
     - aiofiles
     - apispec >=1.0.0b1
     - apistar
@@ -30,7 +30,6 @@ requirements:
     - itsdangerous
     - jinja2
     - marshmallow
-    - python
     - python-multipart
     - pyyaml
     - requests
@@ -38,7 +37,6 @@ requirements:
     - rfc3986
     - starlette =0.12
     - uvicorn =0.10
-    - uvloop  # [not win]
     - whitenoise
 
 test:
