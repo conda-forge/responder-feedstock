@@ -5,11 +5,11 @@ Home: https://github.com/taoufik07/responder
 
 Package license: APACHE-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/responder-feedstock/blob/master/LICENSE.txt)
 
 Summary: A familiar HTTP Service Framework for Python
 
-
+Documentation: http://python-responder.org/
 
 Current build status
 ====================
