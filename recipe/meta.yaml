@@ -1,4 +1,4 @@
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 
 package:
   name: responder
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/responder/responder-{{ version }}.tar.gz
-  sha256: 92cd3daf9d5c58f9c5ad40a2cd310af619e6bd66dab6eb45501c26d1758afada
+  sha256: 06282831e881b73e67cec6664cf1246d59eb6e1fd858bd93db46ba11093238cf
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - responder = responder.cli:cli
 
@@ -51,7 +51,7 @@ about:
   license: APACHE-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'A familiar HTTP Service Framework for Python'
+  summary: A familiar HTTP Service Framework for Python
   doc_url: http://python-responder.org/
 
 extra:
