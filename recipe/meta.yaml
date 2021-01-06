@@ -36,8 +36,8 @@ requirements:
     - requests
     - requests-toolbelt
     - rfc3986
-    - starlette =0.12
-    - uvicorn =0.10
+    - starlette =0.13
+    - uvicorn >=0.11.7,<0.13
     - whitenoise
 
 test:
