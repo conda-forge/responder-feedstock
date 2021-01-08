@@ -1,4 +1,4 @@
-{% set version = "2.0.6" %}
+{% set version = "2.0.7" %}
 
 package:
   name: responder
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/responder/responder-{{ version }}.tar.gz
-  sha256: 06282831e881b73e67cec6664cf1246d59eb6e1fd858bd93db46ba11093238cf
+  sha256: 23a8f4b0136f74c272d187eb888a16e0b3fe4434881abfb60efecb71d78f6934
 
 build:
   noarch: python
