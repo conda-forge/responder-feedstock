@@ -8,7 +8,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/r/responder/responder-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/r/responder/responder-${{ version }}.tar.gz
   sha256: e7488664707f08b6564edac2c22bca4f95d92d074287086827888d74c9838ecf
 
 build:
