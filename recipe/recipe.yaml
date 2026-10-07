@@ -1,0 +1,69 @@
+schema_version: 1
+
+context:
+  version: "9.2.0"
+
+package:
+  name: responder
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/r/responder/responder-${{ version }}.tar.gz
+  sha256: e7488664707f08b6564edac2c22bca4f95d92d074287086827888d74c9838ecf
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - responder = responder.ext.cli:cli
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools >=77
+    - wheel
+  run:
+    - python >=${{ python_min }}
+    - setuptools
+    - a2wsgi
+    - apispec >=6.6
+    - chardet
+    - docopt-ng
+    - httpx >=0.27,<0.29
+    - httpx2 >=2.13.1
+    - itsdangerous
+    - jinja2 >=3.1
+    - marshmallow >=3.20
+    - msgpack-python
+    - pydantic >=2
+    - python-multipart >=0.0.12
+    - pyyaml >=6
+    - starlette >=1
+    - uvicorn >=0.50
+    - uvicorn-standard >=0.50
+
+tests:
+  - python:
+      imports:
+        - responder
+      pip_check: false
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - script:
+      - responder --help
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: A familiar HTTP Service Framework for Python
+  homepage: https://github.com/kennethreitz/responder
+  documentation: https://responder.kennethreitz.org
+
+extra:
+  recipe-maintainers:
+    - dhirschfeld
+    - carlodri
