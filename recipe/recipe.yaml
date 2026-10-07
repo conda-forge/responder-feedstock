@@ -1,7 +1,11 @@
 schema_version: 1
 
+# [not needed for v1, but lint suggests]
+# python_min will be set by conda-forge CI
+
 context:
   version: "9.2.0"
+  python_min: "3.11"
 
 package:
   name: responder
@@ -21,10 +25,12 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python ${{ python_min }}.*
+    - setuptools >=77
     - pip
   run:
-    - python >=3.11
+    - python >=${{ python_min }}
+    - setuptools
     - a2wsgi
     - apispec >=6.6
     - chardet
@@ -36,7 +42,6 @@ requirements:
     - marshmallow >=3.20
     - msgpack
     - pydantic >=2
-    - python >=3.11
     - python-multipart >=0.0.12
     - pyyaml >=6
     - starlette >=1
@@ -48,6 +53,9 @@ tests:
       imports:
         - responder
       pip_check: false
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - script:
       - responder --help
 
