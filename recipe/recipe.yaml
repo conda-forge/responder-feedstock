@@ -1,8 +1,5 @@
 schema_version: 1
 
-# [not needed for v1, but lint suggests]
-# python_min will be set by conda-forge CI
-
 context:
   version: "9.2.0"
 
