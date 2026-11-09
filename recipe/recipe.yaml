@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "9.2.0"
+  version: "9.3.0"
 
 package:
   name: responder
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/r/responder/responder-${{ version }}.tar.gz
-  sha256: e7488664707f08b6564edac2c22bca4f95d92d074287086827888d74c9838ecf
+  sha256: 0e512688853291de8eb47e648c256441b6d1db39e94110ccdd0ed1bbbbfc8dfb
 
 build:
   number: 0
